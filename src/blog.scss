@@ -1,9 +1,11 @@
 @import 'normalize.scss';
 
 $white: #F1F1F1;
+$black: #000000;
 $darkgrey: #232325;
 $offwhite: #C4C4C4;
 $midgrey: #757575;
+$purple: #6e40d2;
 
 html,
 body {
@@ -51,6 +53,10 @@ a {
 
 .post {
   margin: 2.5rem 0 4rem 0;
+
+  &.is-current {
+    margin: 2.5rem 0 2rem 0;
+  }
 }
 
 .post-header {
@@ -91,8 +97,23 @@ a {
   display: inline-block;
 }
 
-.link-page {
-  margin-top: 3rem;
+.bio {
+  display: flex;
+  width: 100%;
+  max-width: 600px;
+  margin: 3.75rem 0 0 0;
+}
+
+.bio-text {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  margin-left: 0.9375rem;
+  color: $midgrey;
+}
+
+.link-page,
+.archive {
+  margin-top: 2.5rem;
 
   .post-link {
     width: 100%;
@@ -101,9 +122,36 @@ a {
   }
 }
 
+.archive {
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+}
+
+.archive-months {
+  margin-bottom: 1.25rem;
+}
+
+.archive-results {
+  ul {
+    margin-top: 1.25rem;
+  }
+}
+
 .pagination {
   display: flex;
   justify-content: space-between;
+}
+
+.responses {
+  margin-bottom: 1.25rem;
+}
+
+.comments-title,
+.responses-title {
+  margin-bottom: 0.625rem;
 }
 
 .posthaven-user-menu {
@@ -131,6 +179,52 @@ a {
       border-radius: 10px;
       left: -15px;
     }
+  }
+  a {
+    color: $purple;
+  }
+}
+
+.posthaven-comment-form {
+  width: 50%;
+
+  label {
+    font-size: 0.875rem;
+  }
+}
+
+.posthaven-comment-body-field {
+  label {
+    width: 100%;
+    display: inline-block;
+  }
+  textarea {
+    font-size: 1rem;
+    line-height: 1.25rem;
+    width: 100%;
+    border: 1px solid $midgrey;
+    background: rgba(0,0,0,0);
+    resize: none;
+    min-height: 100px;
+    padding: 0.625rem;
+    color: $offwhite;
+    border-radius: 3px;
+  }
+}
+
+.posthaven-comment-submit {
+  appearance: none;
+  padding: 0.625rem 1rem;
+  border-radius: 4px;
+  background: $black;
+  border: none;
+  color: $white;
+  margin-top: 0.625rem;
+  transition: background 0.3s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    background: darken($darkgrey, 7%);
   }
 }
 

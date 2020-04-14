@@ -1,11 +1,13 @@
 <section class="archive">
-  <h2>Archive</h2>
+  <a class="home-link link-hover" href="/">Tim's Blog</a>
+
+  <h2 class="title">Archive</h2>
 
   <div class="archive-months">
     <ul>
       {% archive_months %}
         <li>
-          <a href={{ month.url }}>{{ month.date }}</a> ({{ month.count }})
+          <a href={{ month.url }} class="link-hover">{{ month.date }}</a> ({{ month.count }})
         </li>
       {% endarchive_months %}
     </ul>
@@ -15,18 +17,13 @@
   <div class="archive-results">
     {% form 'archive' %}
     <ul>
-      {% archive_results %}
-        <li class="archive-entry">
+      {% archive_results date_format:"%B %e, %Y" %}
+        <div class="post-link">
           <a href="{{ result.url }}">
-            <span>{{ result.title }}</span>
+              <h2 class="title">{{ result.title }}</h2>
+              <p>{{ result.date }}</p>
           </a>
-          <div class="search-highlight">
-            {{ result.snippet }}
-          </div>
-          <div class="archive-date">
-            {{ result.date }}
-          </div>
-        </li>
+      </div>
       {% endarchive_results %}
     </ul>
 

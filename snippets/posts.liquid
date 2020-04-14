@@ -8,12 +8,18 @@
   </section>
 {% else %}
   <section class="post-links link-page">
+    <a class="home-link link-hover" href="/">Tim's Blog</a>
     {% for post in posts %}
       {% include 'postlink' %}
     {% endfor %}
   </section>
 {% endif %}
 
+<footer>
+  <a class="link-hover" href="{{ site.archive_url }}">Archive</a>
+</footer>
+
+{% comment %}
 {% if posts.pagination %}
   <footer class="pagination">
     {% if posts.pagination.previous %}
@@ -24,3 +30,4 @@
     {% endif %}
   </footer>
 {% endif %}
+{% endcomment %}

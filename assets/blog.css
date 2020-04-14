@@ -340,6 +340,8 @@ a {
 
 .post {
   margin: 2.5rem 0 4rem 0; }
+  .post.is-current {
+    margin: 2.5rem 0 2rem 0; }
 
 .post-header {
   margin-bottom: 2.5rem; }
@@ -372,16 +374,48 @@ a {
   margin: 0 0 1.25rem 0;
   display: inline-block; }
 
-.link-page {
-  margin-top: 3rem; }
-  .link-page .post-link {
+.bio {
+  display: flex;
+  width: 100%;
+  max-width: 600px;
+  margin: 3.75rem 0 0 0; }
+
+.bio-text {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  margin-left: 0.9375rem;
+  color: #757575; }
+
+.link-page,
+.archive {
+  margin-top: 2.5rem; }
+  .link-page .post-link,
+  .archive .post-link {
     width: 100%;
     flex: 0 0 100%;
     max-width: 100%; }
 
+.archive ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0; }
+
+.archive-months {
+  margin-bottom: 1.25rem; }
+
+.archive-results ul {
+  margin-top: 1.25rem; }
+
 .pagination {
   display: flex;
   justify-content: space-between; }
+
+.responses {
+  margin-bottom: 1.25rem; }
+
+.comments-title,
+.responses-title {
+  margin-bottom: 0.625rem; }
 
 .posthaven-user-menu {
   text-align: right;
@@ -402,6 +436,41 @@ a {
     background: #C4C4C4;
     border-radius: 10px;
     left: -15px; }
+.posthaven-post-body a {
+  color: #6e40d2; }
+
+.posthaven-comment-form {
+  width: 50%; }
+  .posthaven-comment-form label {
+    font-size: 0.875rem; }
+
+.posthaven-comment-body-field label {
+  width: 100%;
+  display: inline-block; }
+.posthaven-comment-body-field textarea {
+  font-size: 1rem;
+  line-height: 1.25rem;
+  width: 100%;
+  border: 1px solid #757575;
+  background: rgba(0, 0, 0, 0);
+  resize: none;
+  min-height: 100px;
+  padding: 0.625rem;
+  color: #C4C4C4;
+  border-radius: 3px; }
+
+.posthaven-comment-submit {
+  appearance: none;
+  padding: 0.625rem 1rem;
+  border-radius: 4px;
+  background: #000000;
+  border: none;
+  color: #F1F1F1;
+  margin-top: 0.625rem;
+  transition: background 0.3s ease-in-out;
+  cursor: pointer; }
+  .posthaven-comment-submit:hover {
+    background: #121213; }
 
 .footer {
   margin: 2.5rem auto 1.25rem auto; }

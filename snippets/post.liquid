@@ -1,13 +1,15 @@
-<article class="post post-{{ post.id }}">
+<article class="post post-{{ post.id }} {% if post.url.current_page? %}is-current{% endif %}">
+  {% if post.url.current_page? == false %}
+    <a class="home-link link-hover" href="/">Tim's Blog</a>
+  {% endif %}
+
   <header class="post-header">
     {% if post.private? %}
       <div class="private-indicator" title="This post is private">&#128274;</div>
     {% endif %}
 
     {% if post.url.current_page? %}
-      <a class="home-link link-hover" href="/">Return Home</a>
-    {% else %}
-      <a class="home-link link-hover" href="/">Tim's Blog</a>
+      <a class="home-link link-hover" href="/">Return Home</a>      
     {% endif %}
 
     <h1 class="title post-title">{{ post.title }}</h1>
@@ -27,6 +29,10 @@
   <div class="body">
     {{ post.body }}
   </div>
+
+  {% if post.url.current_page? %}
+    {% include 'bio' %}
+  {% endif %}
 
   <footer>
     <div class="details">
