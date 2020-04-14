@@ -1,11 +1,26 @@
-<section class="posts">
-  {% for post in posts %}
-    {% include 'post' %}
-  {% endfor %}
-</section>
+{% if posts.current_page == 1 %}
+  {% assign post = posts.first %}
+  {% include 'post' %}
+  <section class="post-links">
+    {% for post in posts offset:1 %}
+      {% include 'postlink' %}
+    {% endfor %}
+  </section>
+{% else %}
+  <section class="post-links link-page">
+    {% for post in posts %}
+      {% include 'postlink' %}
+    {% endfor %}
+  </section>
+{% endif %}
 
 {% if posts.pagination %}
   <footer class="pagination">
-    {% default_pagination %}
+    {% if posts.pagination.previous %}
+      <a class="pagination-link link-hover" href="{{ posts.pagination.previous.url }}">{{ posts.pagination.previous.title }}</a>
+    {% endif %}
+    {% if posts.pagination.next %}
+      <a class="pagination-link link-hover" href="{{ posts.pagination.next.url }}">{{ posts.pagination.next.title }}</a>
+    {% endif %}
   </footer>
 {% endif %}

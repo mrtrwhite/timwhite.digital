@@ -13,8 +13,7 @@
   {% unless response.anon? %}
     <div class="response">
       <div class="upvote">
-        <strong>{{ response.display_name }}</strong>
-        upvoted this post.
+        {{ response.display_name }} upvoted this post.
       </div>
     </div>
   {% endunless %}

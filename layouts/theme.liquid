@@ -16,6 +16,7 @@
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
+    <link href="https://fonts.googleapis.com/css?family=Inter:300,600&display=swap" rel="stylesheet"> 
     {{ 'blog.css' | asset_url | stylesheet_tag }}
 
     {% comment %} This Required for internal Posthaven functionality to work!.  {% endcomment %}
@@ -25,25 +26,15 @@
   <body class='site-{{ site.id }}'>
     {{ posthaven.user_menu }}
 
-    <header>
-      {% include 'alerts' %}
-
-      <h1>
-        <a href="{{ site.url }}">{{ site.name | smarty_pants }}</a>
-      </h1>
-
-      {% unless site.description == empty %}
-        <h3>{{ site.description | smarty_pants }}</h3>
-      {% endunless %}
-
-      {% include 'nav_menu' %}
-    </header>
-
-
-    <main>
+    <main class="container">
       {{ content_for_layout }}
     </main>
 
+    <footer class="container footer">
+      Built with <a href="https://posthaven.com/">Posthaven, blogging forever.</a>
+    </footer>
+
+    {% comment %} 
     <aside class="sidebar">
       {% include 'bio' %}
 
@@ -68,10 +59,7 @@
       {% include 'blogroll' %}
       {% include 'tags' %}
     </aside>
-
-    <footer>
-      Built with <a href="https://posthaven.com/">Posthaven, blogging forever.</a>
-    </footer>
+    {% endcomment %}
 
     {% comment %} This Required for internal Posthaven functionality to work!.  {% endcomment %}
     {{ posthaven.includes_for_body }}

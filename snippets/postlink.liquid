@@ -1,0 +1,9 @@
+<div class="post-link">
+    <a href="{{ post.url }}">
+        <h2 class="title">{{ post.title }}</h2>
+        <p>
+            {% assign postdate = post.published_at %}
+            {% include 'date' %}
+        </p>
+    </a>
+</div>
