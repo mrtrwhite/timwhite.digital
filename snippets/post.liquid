@@ -6,7 +6,13 @@
       <div class="private-indicator" title="This post is private">&#128274;</div>
     {% endif %}
 
-    <h1 class="title post-title">{{ post.title }}</h1>
+    {% if post.url.current_page? == false %}
+      <a href="{{ post.url }}">
+        <h1 class="title post-title">{{ post.title }}</h1>
+      </a>
+    {% else %}
+      <h1 class="title post-title">{{ post.title }}</h1>
+    {% endif %}
 
     <p>
       {% assign postdate = post.published_at %}
