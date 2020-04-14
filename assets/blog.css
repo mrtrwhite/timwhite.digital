@@ -444,20 +444,37 @@ a {
   .posthaven-comment-form label {
     font-size: 0.875rem; }
 
-.posthaven-comment-body-field label {
-  width: 100%;
-  display: inline-block; }
-.posthaven-comment-body-field textarea {
-  font-size: 1rem;
-  line-height: 1.25rem;
-  width: 100%;
-  border: 1px solid #757575;
-  background: rgba(0, 0, 0, 0);
-  resize: none;
-  min-height: 100px;
-  padding: 0.625rem;
-  color: #C4C4C4;
-  border-radius: 3px; }
+.posthaven-comment-body-field,
+.posthaven-comment-email-field,
+.posthaven-comment-name-field {
+  margin-bottom: 0.625rem; }
+  .posthaven-comment-body-field label,
+  .posthaven-comment-email-field label,
+  .posthaven-comment-name-field label {
+    width: 100%;
+    display: inline-block; }
+  .posthaven-comment-body-field textarea,
+  .posthaven-comment-body-field input,
+  .posthaven-comment-email-field textarea,
+  .posthaven-comment-email-field input,
+  .posthaven-comment-name-field textarea,
+  .posthaven-comment-name-field input {
+    font-size: 1rem;
+    line-height: 1.25rem;
+    width: 100%;
+    border: 1px solid #757575;
+    background: rgba(0, 0, 0, 0);
+    resize: none;
+    padding: 0.625rem;
+    color: #C4C4C4;
+    border-radius: 3px; }
+  .posthaven-comment-body-field textarea,
+  .posthaven-comment-email-field textarea,
+  .posthaven-comment-name-field textarea {
+    min-height: 100px; }
+
+.posthaven-comment-add-url {
+  display: none; }
 
 .posthaven-comment-submit {
   appearance: none;

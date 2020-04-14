@@ -193,23 +193,33 @@ a {
   }
 }
 
-.posthaven-comment-body-field {
+.posthaven-comment-body-field,
+.posthaven-comment-email-field,
+.posthaven-comment-name-field {
+  margin-bottom: 0.625rem;
   label {
     width: 100%;
     display: inline-block;
   }
-  textarea {
+  textarea,
+  input {
     font-size: 1rem;
     line-height: 1.25rem;
     width: 100%;
     border: 1px solid $midgrey;
     background: rgba(0,0,0,0);
     resize: none;
-    min-height: 100px;
     padding: 0.625rem;
     color: $offwhite;
     border-radius: 3px;
   }
+  textarea {
+    min-height: 100px;
+  }
+}
+
+.posthaven-comment-add-url {
+  display: none;
 }
 
 .posthaven-comment-submit {
