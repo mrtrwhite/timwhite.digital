@@ -426,7 +426,8 @@ a {
     color: #757575; }
 
 .posthaven-post-body blockquote {
-  position: relative; }
+  position: relative;
+  margin: 10px 30px; }
   .posthaven-post-body blockquote::before {
     content: " ";
     position: absolute;
@@ -491,3 +492,13 @@ a {
 
 .footer {
   margin: 2.5rem auto 1.25rem auto; }
+
+@media screen and (max-width: 480px) {
+  .post-link {
+    flex: 0 0 100%;
+    max-width: 100%; }
+    .post-link p {
+      margin-bottom: 0; }
+
+  .posthaven-comment-form {
+    width: 100%; } }
