@@ -16,7 +16,8 @@
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <link href="https://fonts.googleapis.com/css?family=Inter:400,600&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Inter:400,600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     {{ 'blog.css' | asset_url | stylesheet_tag }}
 
     {% comment %} This Required for internal Posthaven functionality to work!.  {% endcomment %}
@@ -34,32 +35,8 @@
       Built with <a href="https://posthaven.com/">Posthaven, blogging forever.</a>
     </footer>
 
-    {% comment %} 
-    <aside class="sidebar">
-      {% include 'bio' %}
-
-      <section class="archive">
-        <h1>Archive</h1>
-        {% form 'archive' %}
-        <a href="{{ site.archive_url }}">Browse the archive</a>
-      </section>
-
-      {% include 'contributors' %}
-
-      {% if site.subscription_enabled? %}
-        <section class="subscribe">
-          <h1>Subscribe</h1>
-
-          {% form 'subscribe' include_prompt:true %}
-
-          <a href="{{ site.feed_url }}">Subscribe to the feed</a>
-        </section>
-      {% endif %}
-
-      {% include 'blogroll' %}
-      {% include 'tags' %}
-    </aside>
-    {% endcomment %}
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="{{ 'scripts/blog.js' | asset_url }}"></script>
 
     {% comment %} This Required for internal Posthaven functionality to work!.  {% endcomment %}
     {{ posthaven.includes_for_body }}

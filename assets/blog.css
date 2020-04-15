@@ -310,7 +310,7 @@ body {
   font-size: 16px;
   line-height: 1.875rem;
   font-weight: 400;
-  background: #34343c; }
+  background: #2E2E33; }
 
 body * {
   box-sizing: border-box; }
@@ -488,7 +488,7 @@ a {
   transition: background 0.3s ease-in-out;
   cursor: pointer; }
   .posthaven-comment-submit:hover {
-    background: #232329; }
+    background: #1d1d20; }
 
 .footer {
   margin: 2.5rem auto 1.25rem auto; }
