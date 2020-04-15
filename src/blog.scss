@@ -1,19 +1,20 @@
 @import 'normalize.scss';
 
-$white: #F1F1F1;
+$white: #DDD;
 $black: #000000;
-$darkgrey: #232325;
-$offwhite: #C4C4C4;
-$midgrey: #757575;
-$purple: #6e40d2;
+$darkgrey: #34343c;
+$title: #BDBDBD;
+$body: #999;
+$midgrey: #6d6c77;
+$purple: #94a9db;
 
 html,
 body {
   font-family: 'Inter', sans-serif;
-  color: $offwhite;
+  color: $body;
   font-size: 16px;
   line-height: 1.875rem;
-  font-weight: 300;
+  font-weight: 400;
   background: $darkgrey;
 }
 
@@ -27,7 +28,7 @@ p {
 
 a {
   text-decoration: none;
-  color: $offwhite;
+  color: $body;
 }
 
 .container {
@@ -46,7 +47,7 @@ a {
 }
 
 .title {
-  color: $white;
+  color: $title;
   font-weight: 600;
   margin: 0 0 1.25rem 0;
 }
@@ -176,7 +177,7 @@ a {
       display: block;
       width: 3px;
       height: 100%;
-      background: $offwhite;
+      background: $body;
       border-radius: 10px;
       left: -15px;
     }
@@ -211,7 +212,7 @@ a {
     background: rgba(0,0,0,0);
     resize: none;
     padding: 0.625rem;
-    color: $offwhite;
+    color: $body;
     border-radius: 3px;
   }
   textarea {
@@ -229,7 +230,7 @@ a {
   border-radius: 4px;
   background: $black;
   border: none;
-  color: $white;
+  color: $title;
   margin-top: 0.625rem;
   transition: background 0.3s ease-in-out;
   cursor: pointer;

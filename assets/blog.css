@@ -306,11 +306,11 @@ template {
 html,
 body {
   font-family: 'Inter', sans-serif;
-  color: #C4C4C4;
+  color: #999;
   font-size: 16px;
   line-height: 1.875rem;
-  font-weight: 300;
-  background: #232325; }
+  font-weight: 400;
+  background: #34343c; }
 
 body * {
   box-sizing: border-box; }
@@ -320,7 +320,7 @@ p {
 
 a {
   text-decoration: none;
-  color: #C4C4C4; }
+  color: #999; }
 
 .container {
   width: 100%;
@@ -331,10 +331,10 @@ a {
 .link-hover {
   transition: color 0.25s ease-in-out; }
   .link-hover:hover {
-    color: #F1F1F1; }
+    color: #DDD; }
 
 .title {
-  color: #F1F1F1;
+  color: #BDBDBD;
   font-weight: 600;
   margin: 0 0 1.25rem 0; }
 
@@ -353,7 +353,7 @@ a {
 
 .post-date,
 .view-count {
-  color: #757575;
+  color: #6d6c77;
   margin: 0; }
 
 .post-links {
@@ -384,7 +384,7 @@ a {
   font-size: 0.875rem;
   line-height: 1.5rem;
   margin-left: 0.9375rem;
-  color: #757575; }
+  color: #6d6c77; }
 
 .link-page,
 .archive {
@@ -423,7 +423,7 @@ a {
   margin: 0.625rem 1.25rem 0 0; }
   .posthaven-user-menu a {
     margin-left: 10px;
-    color: #757575; }
+    color: #6d6c77; }
 
 .posthaven-post-body blockquote {
   position: relative;
@@ -434,11 +434,11 @@ a {
     display: block;
     width: 3px;
     height: 100%;
-    background: #C4C4C4;
+    background: #999;
     border-radius: 10px;
     left: -15px; }
 .posthaven-post-body a {
-  color: #6e40d2; }
+  color: #94a9db; }
 
 .posthaven-comment-form {
   width: 50%; }
@@ -463,11 +463,11 @@ a {
     font-size: 1rem;
     line-height: 1.25rem;
     width: 100%;
-    border: 1px solid #757575;
+    border: 1px solid #6d6c77;
     background: rgba(0, 0, 0, 0);
     resize: none;
     padding: 0.625rem;
-    color: #C4C4C4;
+    color: #999;
     border-radius: 3px; }
   .posthaven-comment-body-field textarea,
   .posthaven-comment-email-field textarea,
@@ -483,12 +483,12 @@ a {
   border-radius: 4px;
   background: #000000;
   border: none;
-  color: #F1F1F1;
+  color: #BDBDBD;
   margin-top: 0.625rem;
   transition: background 0.3s ease-in-out;
   cursor: pointer; }
   .posthaven-comment-submit:hover {
-    background: #121213; }
+    background: #232329; }
 
 .footer {
   margin: 2.5rem auto 1.25rem auto; }
