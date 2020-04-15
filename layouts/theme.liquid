@@ -17,7 +17,6 @@
     <![endif]-->
 
     <link href="https://fonts.googleapis.com/css?family=Inter:400,600&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     {{ 'blog.css' | asset_url | stylesheet_tag }}
 
     {% comment %} This Required for internal Posthaven functionality to work!.  {% endcomment %}
@@ -34,9 +33,6 @@
     <footer class="container footer">
       Built with <a href="https://posthaven.com/">Posthaven, blogging forever.</a>
     </footer>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="{{ 'scripts/blog.js' | asset_url }}"></script>
 
     {% comment %} This Required for internal Posthaven functionality to work!.  {% endcomment %}
     {{ posthaven.includes_for_body }}
