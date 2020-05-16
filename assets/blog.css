@@ -345,6 +345,8 @@ a {
 
 .post-header {
   margin-bottom: 2.5rem; }
+  .post-header a {
+    display: inline-block; }
 
 .post-title {
   font-size: 1.875rem;
@@ -412,6 +414,15 @@ a {
 
 .responses {
   margin-bottom: 1.25rem; }
+
+.response {
+  font-size: 0.875rem;
+  line-height: 1.75rem;
+  margin-bottom: 1.25rem; }
+  .response .byline {
+    color: #6d6c77; }
+  .response:last-child {
+    margin-bottom: 0; }
 
 .comments-title,
 .responses-title {
@@ -489,6 +500,12 @@ a {
   cursor: pointer; }
   .posthaven-comment-submit:hover {
     background: #1d1d20; }
+
+.posthaven-file-image {
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  padding: 0;
+  border-radius: 0; }
 
 .footer {
   margin: 2.5rem auto 1.25rem auto; }

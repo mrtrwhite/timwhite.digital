@@ -62,6 +62,10 @@ a {
 
 .post-header {
   margin-bottom: 2.5rem;
+
+  a {
+    display: inline-block;
+  }
 }
 
 .post-title {
@@ -148,6 +152,20 @@ a {
 
 .responses {
   margin-bottom: 1.25rem;
+}
+
+.response {
+  font-size: 0.875rem;
+  line-height: 1.75rem;
+  margin-bottom: 1.25rem;
+
+  .byline {
+    color: $midgrey;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .comments-title,
@@ -238,6 +256,13 @@ a {
   &:hover {
     background: darken($darkgrey, 7%);
   }
+}
+
+.posthaven-file-image {
+  background: rgba(0,0,0,0);
+  border: none;
+  padding: 0;
+  border-radius: 0;
 }
 
 .footer {
