@@ -1,9 +1,5 @@
-<div class="post-link">
-    <a href="{{ post.url }}">
-        <h2 class="title link-hover">{{ post.title }}</h2>
-        <p>
-            {% assign postdate = post.published_at %}
-            {% include 'date' %}
-        </p>
-    </a>
-</div>
+<a class="post-link" href="{{ post.url }}">
+    <h2 class="title link-hover">{{ post.title }}</h2>
+    {% assign postdate = post.published_at %}
+    {% include 'date' %}
+</a>

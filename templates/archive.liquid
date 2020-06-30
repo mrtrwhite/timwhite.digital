@@ -18,12 +18,10 @@
     {% form 'archive' %}
     <ul>
       {% archive_results date_format:"%B %e, %Y" %}
-        <div class="post-link">
-          <a href="{{ result.url }}">
-              <h2 class="title">{{ result.title }}</h2>
-              <p>{{ result.date }}</p>
-          </a>
-      </div>
+        <a class="post-link" href="{{ result.url }}">
+            <h2 class="title">{{ result.title }}</h2>
+            <span>{{ result.date }}</span>
+        </a>
       {% endarchive_results %}
     </ul>
 
