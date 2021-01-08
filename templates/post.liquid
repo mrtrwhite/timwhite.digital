@@ -24,4 +24,12 @@
       {% form 'comment' %}
     </div>
   {% endif %}
+
+  {% if site.subscription_enabled? %}
+    <div class="subscribe">
+      <h4 class="comments-title title">Subscribe</h4>
+      {% form 'subscribe' include_prompt:false %}
+    </div>
+  {% endif %}
+
 </footer>

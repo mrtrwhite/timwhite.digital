@@ -457,10 +457,8 @@ a {
 .posthaven-post-body a {
   color: #94a9db; }
 
-.posthaven-comment-form {
-  width: 50%; }
-  .posthaven-comment-form label {
-    font-size: 0.875rem; }
+.posthaven-comment-form label {
+  font-size: 0.875rem; }
 
 .posthaven-comment-body-field,
 .posthaven-comment-email-field,
@@ -513,6 +511,41 @@ a {
   padding: 0;
   border-radius: 0; }
 
+.post-responses {
+  display: flex;
+  flex-wrap: wrap; }
+
+.new-comment {
+  padding-right: 10px;
+  width: 50%; }
+
+.subscribe {
+  padding-left: 10px;
+  width: 50%; }
+  .subscribe input[name="email_address"] {
+    font-size: 1rem;
+    line-height: 1.25rem;
+    width: 100%;
+    border: 1px solid #6d6c77;
+    background: rgba(0, 0, 0, 0);
+    resize: none;
+    padding: 0.625rem;
+    color: #999;
+    border-radius: 3px;
+    margin: 10px 0; }
+  .subscribe input[type="submit"] {
+    appearance: none;
+    padding: 0.625rem 1rem;
+    border-radius: 4px;
+    background: #000000;
+    border: none;
+    color: #BDBDBD;
+    margin-top: 0.625rem;
+    transition: background 0.3s ease-in-out;
+    cursor: pointer; }
+    .subscribe input[type="submit"]:hover {
+      background: #1d1d20; }
+
 .footer {
   margin: 2.5rem auto 1.25rem auto; }
 
@@ -523,5 +556,7 @@ a {
     .post-link p {
       margin-bottom: 0; }
 
-  .posthaven-comment-form {
-    width: 100%; } }
+  .new-comment,
+  .subscribe {
+    width: 100%;
+    padding: 0; } }

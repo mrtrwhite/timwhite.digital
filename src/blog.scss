@@ -213,8 +213,6 @@ a {
 }
 
 .posthaven-comment-form {
-  width: 50%;
-
   label {
     font-size: 0.875rem;
   }
@@ -272,6 +270,50 @@ a {
   border-radius: 0;
 }
 
+.post-responses {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.new-comment {
+  padding-right: 10px;
+  width: 50%;
+}
+
+.subscribe {
+  padding-left: 10px;
+  width: 50%;
+
+  input[name="email_address"] {
+    font-size: 1rem;
+    line-height: 1.25rem;
+    width: 100%;
+    border: 1px solid $midgrey;
+    background: rgba(0,0,0,0);
+    resize: none;
+    padding: 0.625rem;
+    color: $body;
+    border-radius: 3px;
+    margin: 10px 0;
+  }
+
+  input[type="submit"] {
+    appearance: none;
+    padding: 0.625rem 1rem;
+    border-radius: 4px;
+    background: $black;
+    border: none;
+    color: $title;
+    margin-top: 0.625rem;
+    transition: background 0.3s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      background: darken($darkgrey, 7%);
+    }
+  }
+}
+
 .footer {
   margin: 2.5rem auto 1.25rem auto;
 }
@@ -285,7 +327,9 @@ a {
       margin-bottom: 0;
     }
   }
-  .posthaven-comment-form {
+  .new-comment,
+  .subscribe {
     width: 100%;
+    padding: 0;
   }
 }
